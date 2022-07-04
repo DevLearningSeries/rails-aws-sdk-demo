@@ -51,6 +51,8 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 # AWS setup
+gem 'aws-sdk-cognitoidentity', '~> 1'
+gem 'aws-sdk-cognitoidentityprovider', '~> 1'
 gem 'aws-sdk-rails', '~> 3'
 
 group :development, :test do
