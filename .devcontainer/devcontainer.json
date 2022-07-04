@@ -80,7 +80,7 @@
 						"server": "localhost",
 						"port": 5432,
 						// update this to match config/database.yml
-						"database": "anka_development",
+						"database": "rails_aws_sdk_demo_development",
 						"username": "vscode"
 					},
 					{
@@ -90,7 +90,7 @@
 						"server": "localhost",
 						"port": 5432,
 						// update this to match config/database.yml
-						"database": "anka_test",
+						"database": "rails_aws_sdk_demo_test",
 						"username": "vscode"
 					}
 				]
