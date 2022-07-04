@@ -1,0 +1,27 @@
+AllCops:
+  Exclude:
+    - "db/**/*"
+    - "config/**/*"
+    - "vendor/**/*"
+    - "script/**/*"
+    - "bin/**/*"
+    - "public/**/*"
+    - "tmp/**/*"
+    - "*.sh"
+    - lib/tasks/auto_annotate_models.rake
+  NewCops: disable
+
+Style/Documentation:
+  Enabled: false
+
+# Method definitions after `private` or `protected` isolated calls need one
+# extra level of indentation.
+Layout/IndentationConsistency:
+  Enabled: true
+  EnforcedStyle: indented_internal_methods
+
+Metrics/MethodLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+
+Style/MutableConstant:
+  Enabled: false

@@ -1,0 +1,117 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/ruby-rails-postgres
+// Update the VARIANT arg in docker-compose.yml to pick a Ruby version
+{
+	"name": "Anka Rails Project",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"rebornix.Ruby",
+				"mtxr.sqltools",
+				"mtxr.sqltools-driver-pg",
+				"aliariff.auto-add-brackets",
+				"editorconfig.editorconfig",
+				"dbaeumer.vscode-eslint",
+				"eamodio.gitlens",
+				"esbenp.prettier-vscode",
+				"streetsidesoftware.code-spell-checker",
+				"mikestead.dotenv",
+				"kaiwood.endwise",
+				"github.vscode-pull-request-github",
+				"github.remotehub",
+				"codezombiech.gitignore",
+				"pkief.material-product-icons",
+				"christian-kohler.path-intellisense",
+				"johnpapa.vscode-peacock",
+				"aki77.rails-db-schema",
+				"aki77.rails-routes",
+				"sarahridge.vscode-rails-syntax",
+				"rebornix.ruby",
+				"docsmsft.docs-yaml",
+				"castwide.solargraph",
+				"kosai106.ruby-syntax-replacer",
+				"hoovercj.ruby-linter",
+				"misogi.ruby-rubocop",
+				"miguel-savignano.ruby-symbols",
+				"qcz.text-power-tools",
+				"visualstudioexptteam.vscodeintellicode",
+				"wingrunr21.vscode-ruby",
+				"vscode-icons-team.vscode-icons",
+				"redhat.vscode-yaml",
+				"mrmlnc.vscode-duplicate",
+				"EditorConfig.EditorConfig",
+				"GitHub.copilot",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"ms-vsliveshare.vsliveshare",
+				"eg2.vscode-npm-script",
+				"christian-kohler.npm-intellisense",
+				"42Crunch.vscode-openapi",
+				"ms-playwright.playwright",
+				"sibiraj-s.vscode-scss-formatter",
+				"zjffun.snippetsmanager",
+				"rangav.vscode-thunder-client",
+				"Gruntfuggly.todo-tree",
+				"ms-vsliveshare.vsliveshare-audio",
+				"hbenl.vscode-test-explorer",
+				"ms-vscode.test-adapter-converter",
+				"albert.TabOut",
+				"meganrogge.template-string-converter",
+				"ecmel.vscode-html-css",
+				"VisualStudioExptTeam.intellicode-api-usage-examples",
+				"Zignd.html-css-class-completion",
+				"dannyconnell.split-html-attributes",
+				"akamud.vscode-caniuse",
+				"KoichiSasada.vscode-rdbg",
+				"ms-vscode.live-server"
+			],
+			"settings": {
+				"sqltools.connections": [
+					{
+						"name": "Rails Development Database",
+						"driver": "PostgreSQL",
+						"previewLimit": 50,
+						"server": "localhost",
+						"port": 5432,
+						// update this to match config/database.yml
+						"database": "anka_development",
+						"username": "vscode"
+					},
+					{
+						"name": "Rails Test Database",
+						"driver": "PostgreSQL",
+						"previewLimit": 50,
+						"server": "localhost",
+						"port": 5432,
+						// update this to match config/database.yml
+						"database": "anka_test",
+						"username": "vscode"
+					}
+				]
+			},
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// This can be used to network with other containers or the host.
+	// "forwardPorts": [3000],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "bundle install && rake db:setup",
+	"postStartCommand": "bash .devcontainer/scripts/post-start.sh",
+	"postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	"features": {
+		"git": "latest",
+		"aws-cli": "latest",
+		"sshd": "latest",
+		"homebrew": "latest"
+	}
+}
