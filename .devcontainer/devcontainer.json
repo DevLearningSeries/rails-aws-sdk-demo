@@ -69,7 +69,8 @@
 				"dannyconnell.split-html-attributes",
 				"akamud.vscode-caniuse",
 				"KoichiSasada.vscode-rdbg",
-				"ms-vscode.live-server"
+				"ms-vscode.live-server",
+				"MisterJ.vue-volar-extention-pack"
 			],
 			"settings": {
 				"sqltools.connections": [
@@ -80,7 +81,7 @@
 						"server": "localhost",
 						"port": 5432,
 						// update this to match config/database.yml
-						"database": "anka_development",
+						"database": "rails_aws_sdk_demo_development",
 						"username": "vscode"
 					},
 					{
@@ -90,7 +91,7 @@
 						"server": "localhost",
 						"port": 5432,
 						// update this to match config/database.yml
-						"database": "anka_test",
+						"database": "rails_aws_sdk_demo_test",
 						"username": "vscode"
 					}
 				]

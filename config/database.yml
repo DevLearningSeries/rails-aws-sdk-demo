@@ -20,6 +20,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch('PGUSER') { ENV['USER'] } %>
+  host: localhost
 
 development:
   <<: *default
@@ -82,5 +84,3 @@ test:
 production:
   <<: *default
   database: rails_aws_sdk_demo_production
-  username: rails_aws_sdk_demo
-  password: <%= ENV["RAILS_AWS_SDK_DEMO_DATABASE_PASSWORD"] %>
