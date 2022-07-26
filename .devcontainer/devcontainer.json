@@ -69,7 +69,8 @@
 				"dannyconnell.split-html-attributes",
 				"akamud.vscode-caniuse",
 				"KoichiSasada.vscode-rdbg",
-				"ms-vscode.live-server"
+				"ms-vscode.live-server",
+				"MisterJ.vue-volar-extention-pack"
 			],
 			"settings": {
 				"sqltools.connections": [
